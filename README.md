@@ -26,6 +26,10 @@ smart_mirror/
 - **README.md:** Documentation file (you're reading it!).
 - **.gitignore:** Specifies untracked files to ignore.
 
+## API Key
+
+You need to obtain an API key from OpenWeatherMap to use the `WeatherData` class. Visit [OpenWeatherMap](https://openweathermap.org/) to sign up and get your API key.
+
 ## Contribution
 Contributions to the project are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
 
