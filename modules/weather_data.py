@@ -6,12 +6,14 @@ class WeatherData:
 
     def fetch_weather(self, location):
         try:
+            # Fetch weather observation for the specified location
             observation = self.owm.weather_at_place(location)
             weather = observation.get_weather()
 
             temperature = weather.get_temperature('celsius')['temp']
             status = weather.get_status()
-
+            
+            # Return weather data as a dictionary
             return {
                 'temperature': temperature,
                 'status': status,
