@@ -9,15 +9,16 @@ smart_mirror/
 |-- smart_mirror_app/
 |   |-- __init__.py
 |   |-- smart_mirror_app.py
-|-- modules/
+|-- components/
 |   |-- __init__.py
 |   |-- weather_data.py
 |   |-- news_data.py
-|   |-- gesture_recognition.py
-|   |-- voice_control.py
+|-- resources/
+|   |-- image
 |-- requirements.txt
 |-- README.md
 |-- .gitignore
+
 ```
 
 - **smart_mirror_app:** Contains the main application code.
