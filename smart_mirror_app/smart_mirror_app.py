@@ -1,5 +1,13 @@
 from tkinter import Tk, Frame, Label
 import requests
+import json
+from newsapi import NewsApiClient
+
+# read config file:
+with open('config/config.json') as config_file:
+    config = json.load(config_file)
+
+api_key = config['API_KEY']
 
 # class to fetch weather data 
 class WeatherData:
@@ -71,7 +79,7 @@ class SmartMirrorApp:
         self.root.attributes('-fullscreen', True)
 
     # Weather display frame
-        self.weather_display = WeatherDisplay(root, api_key='3e28611a96f98531af8cdf8f67545878', city= 'London' )
+        self.weather_display = WeatherDisplay(root, api_key= api_key, city= 'London' )
         self.weather_display.place(relx=1, rely=0, anchor='ne')
 
 if __name__ == "__main__":
