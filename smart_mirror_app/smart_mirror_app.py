@@ -15,10 +15,19 @@ class WeatherData:
         except requests.RequestException as e: # all exceptions from the Request library
             print(f'Error fetching weather data: {e}')
             return None
-    
-    def extract_weather_info(self):
-        pass
 
+    def extract_weather_info(self, data, response):  # method to handle response received 
+        if response.status_code == 200:   # if request is successfull extract information
+           temperature = data['main']['temp']
+           weather_description = data['weather'][0]['description']
+           # return information as dictionary
+           return {
+               "temperature": temperature,
+               "description": weather_description,
+               "city": self.city
+           }
+        else:
+            print("Failed to retrieve weather data")
 class SmartMirrorApp:
     def __init__(self, root):
         self.root = root
